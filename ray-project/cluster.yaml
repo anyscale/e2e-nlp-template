@@ -52,7 +52,8 @@ setup_commands:
 
     # Installing this without -U to make sure we don't replace the existing Ray installation
     - pip install ray[tune]
-    - pip install -U ipdb torch
+    - pip install -U ipdb
+    - pip install -U torch==1.5.0+cu101 torchvision==0.6.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
     # Install HuggingFace
     - git clone https://github.com/huggingface/transformers || true
     - cd transformers &&
