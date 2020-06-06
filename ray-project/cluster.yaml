@@ -59,6 +59,8 @@ setup_commands:
     - cd transformers &&
       pip install . &&
       pip install -r ./examples/requirements.txt
+    - pip install uvicorn
+    - pip install blist
     # Download glue
     - if [[ -e glue_data ]];
       then echo "not downloading glue";
